@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flask",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app:create_app",
+                "FLASK_ENV": "development"
+            },
+            "args": [
+                "run",
+                //"--no-debugger",
+                "--reload"
+            ],
+            "jinja": true
+        }
+    ]
+}

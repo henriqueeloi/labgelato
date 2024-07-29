@@ -1,0 +1,8 @@
+/* custom.css */
+.navbar.fixed-top {
+    margin-bottom: 1.2rem !important; /* Ajuste conforme necessário */
+}
+
+main {
+    margin-top: 4rem; /* Ajuste conforme necessário para compensar a altura do navbar */
+}

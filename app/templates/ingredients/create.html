@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<span class="title"><h1>{% block title %} The Posts Page {% endblock %}</h1></span>
+<div class="content">
+    <div class="my-1 p-3 bg-white rounded shadow-sm">
+        <form method="post" action="{{ url_for('ingredients.create_ingredient') }}">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ data.get('name', '') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="sugars">Sugars</label>
+                <input type="number" class="form-control" id="sugars" name="sugars" step="0.01" value="{{ data.get('sugars', '') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="fats">Fats</label>
+                <input type="number" class="form-control" id="fats" name="fats" step="0.01" value="{{ data.get('fats', '') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="slng">Slng</label>
+                <input type="number" class="form-control" id="slng" name="slng" step="0.01" value="{{ data.get('slng', '') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="other_solids">Other Solids</label>
+                <input type="number" class="form-control" id="other_solids" name="other_solids" step="0.01" value="{{ data.get('other_solids', '') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="pod">POD</label>
+                <input type="number" class="form-control" id="pod" name="pod" step="0.01" value="{{ data.get('pod', '') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="pac">PAC</label>
+                <input type="number" class="form-control" id="pac" name="pac" step="0.01" value="{{ data.get('pac', '') }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
