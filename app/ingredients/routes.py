@@ -18,6 +18,8 @@ def ingredient(ingredient_id):
 
 @bp.route('/create', methods=['GET', 'POST'])
 def create_ingredient():
+    data = request.form.to_dict() if request.method == 'POST' else {}
+    
     if request.method == 'POST':
         data = request.form
         name = data.get('name')
@@ -38,7 +40,7 @@ def create_ingredient():
             flash(str(e), 'error')
             return render_template('ingredients/create.html', data=data)
         
-    return render_template('ingredients/create.html')
+    return render_template('ingredients/create.html', data=data)
 
 @bp.route('/categories/')
 def categories():

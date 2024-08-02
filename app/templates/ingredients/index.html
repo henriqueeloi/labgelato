@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<span class="title"><h1>{% block title %} The Posts Page {% endblock %}</h1></span>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"><i class="lni lni-user"></i>
+        <span>{% block title %} Lista de Ingredientes {% endblock %}</span></h1>
+  </div>
 <div class="content">
     <div class="my-1 p-3 bg-white rounded shadow-sm">
-        <h1 class="display-4">Lista de Ingredientes</h1>
         <h4>Tabela de Produtos <span class="badge text-bg-secondary">New</span></h4>
         <ul class="list-group">
            {% for ingredient in ingredients %}
